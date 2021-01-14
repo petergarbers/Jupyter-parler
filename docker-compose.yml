@@ -1,0 +1,13 @@
+version: "3"
+services:
+
+  jupyter:
+    build:
+      context: ./jupyter
+    ports:
+      - "8888:8888"
+    extra_hosts:
+      - "video.parler.com:8.240.242.124"
+    volumes:
+          - "./notebooks:/notebooks" 
+          - "./data:/data"
